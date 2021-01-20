@@ -1,0 +1,16 @@
+{
+  "name": "@delipack/root",
+  "version": "1.0.0",
+  "private": "true",
+  "license": "MIT",
+  "workspaces": [
+    "packages/shared/*",
+    "packages/apps/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start --stream"
+  },
+  "dependencies": {
+    "lerna": "^3.22.1"
+  }
+}

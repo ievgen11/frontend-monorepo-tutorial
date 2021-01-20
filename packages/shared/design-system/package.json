@@ -1,0 +1,16 @@
+{
+  "name": "@delipack/design-system",
+  "version": "1.0.0",
+  "private": "true",
+  "license": "MIT",
+  "scripts": {
+    "start": "start-storybook --port 7000"
+  },
+  "devDependencies": {
+    "@storybook/react": "^6.1.14"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
