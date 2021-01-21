@@ -1,4 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { App } from "./components/App";
 
-ReactDOM.render(<h1>Client Interface</h1>, document.getElementById("root"));
+import 'normalize.css';
+import "./styles/init.css";
+
+ReactDOM.render(<App />, document.getElementById("root"));
