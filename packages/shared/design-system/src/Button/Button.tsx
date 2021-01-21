@@ -22,13 +22,13 @@ const StyledButton = styled.button`
   }
 
   &:hover {
-    background-color: #ffffff;
+    background-color: #fff;
     transform: translate(0, -1px);
   }
 
   &:focus,
   &:active {
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: -4px -4px 12px 8px #f0f0f0, 0 2px 6px 0 rgba(0, 0, 0, 0.2),
       2px 0 6px 0 rgba(0, 0, 0, 0.2), -2px 0 6px 0 rgba(0, 0, 0, 0.2);
     transform: translate(0, 1px);

@@ -8,7 +8,8 @@
     "packages/apps/*"
   ],
   "scripts": {
-    "start": "lerna run --parallel start --stream"
+    "start": "lerna run --parallel start --stream",
+    "lint": "lerna run --parallel lint --stream"
   },
   "dependencies": {
     "lerna": "^3.22.1"
