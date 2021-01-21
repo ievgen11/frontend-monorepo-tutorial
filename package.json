@@ -10,7 +10,8 @@
   "scripts": {
     "start": "lerna run --parallel start --stream",
     "lint": "lerna run --parallel lint --stream",
-    "test": "lerna run --parallel test --stream"
+    "test": "lerna run --parallel test --stream",
+    "build": "lerna run build --stream"
   },
   "dependencies": {
     "lerna": "^3.22.1"

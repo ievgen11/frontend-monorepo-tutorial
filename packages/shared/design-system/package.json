@@ -8,7 +8,8 @@
     "lint:styles": "stylelint './src/**/*.{ts,tsx}'",
     "lint:ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "start": "start-storybook --port 7000",
-    "test": "jest"
+    "test": "jest",
+    "build": "build-storybook --output-dir ./build"
   },
   "dependencies": {
     "@storybook/addon-actions": "^6.1.14",
