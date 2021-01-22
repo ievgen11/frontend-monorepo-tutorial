@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env, options) => ({
@@ -46,13 +47,24 @@ module.exports = (env, options) => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: true,
+      hash: true,
       template: path.resolve(path.join(__dirname, "./src/index.html")),
+      favicon: path.resolve(path.join(__dirname, "./favicon.ico")),
+      title: "Delipack: Client Interface",
     }),
     new MiniCssExtractPlugin({
       filename: "static/css/[name].[chunkhash:6].css",
       chunkFilename: "static/css/[name].[chunkhash:6].css",
     }),
+    new CleanWebpackPlugin(),
   ],
+  output: {
+    publicPath: "/",
+    path: path.resolve(path.join(__dirname, "./build")),
+    filename: "static/js/[name].js",
+    sourceMapFilename: "static/maps/[filebase].map",
+  },
   optimization: {
     splitChunks: {
       chunks: "all",
