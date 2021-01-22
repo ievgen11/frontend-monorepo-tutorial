@@ -18,7 +18,16 @@ module.exports = {
           {
             include: path.resolve(path.join(__dirname, "../src")),
             test: /.*(\.ts|\.tsx)$/,
-            use: ["ts-loader"],
+            use: [
+              {
+                loader: "ts-loader",
+                options: {
+                  compilerOptions: {
+                    outDir: "./build/definitions",
+                  },
+                },
+              },
+            ],
           },
         ],
       },
