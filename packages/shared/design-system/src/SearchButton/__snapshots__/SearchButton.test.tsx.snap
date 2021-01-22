@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchButton /> Snapshot is intact 1`] = `
+<form
+  className="sc-bdfBwQ brMxhW"
+  onSubmit={[Function]}
+>
+  <input
+    className="sc-gsTCUz cgOjni"
+    disabled={false}
+    name="value"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <input
+    className="sc-dlfnbm dJDaSN"
+    disabled={true}
+    title="Search"
+    type="submit"
+    value="🔍"
+  />
+</form>
+`;
