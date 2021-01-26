@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@delipack/design-system": "1.0.0",
+    "faker": "^5.2.0",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
