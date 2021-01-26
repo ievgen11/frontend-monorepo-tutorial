@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrackingHistory /> Snapshot is intact 1`] = `
+<ul
+  className="sc-bdfBwQ jCCheO"
+>
+  Test
+</ul>
+`;
+
+exports[`<TrackingHistoryItem /> Snapshot is intact 1`] = `
+<li
+  className="sc-gsTCUz bmwMqN"
+>
+  <span
+    className="sc-dlfnbm AMCU"
+  />
+  <span
+    className="sc-hKgILt kfnKoE"
+  />
+</li>
+`;

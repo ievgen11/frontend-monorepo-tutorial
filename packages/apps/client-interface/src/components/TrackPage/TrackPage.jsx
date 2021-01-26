@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import faker from "faker";
 
-import { Button, Section } from "@delipack/design-system";
+import {
+  Button,
+  Section,
+  TrackingHistory,
+  TrackingHistoryItem,
+} from "@delipack/design-system";
 
 import map from "./map.png";
 import styles from "./styles.scss";
@@ -41,18 +46,15 @@ export const TrackPage = () => {
             <span className={styles.tracking_number}>{tracking_number}</span>
           </section>
           <section>
-            <ul className={styles.history}>
+            <TrackingHistory>
               {Array.apply(null, Array(5)).map((item, index) => (
-                <li className={styles.history_event} key={index}>
-                  <span className={styles.history_date}>
-                    {faker.date.weekday()}
-                  </span>
-                  <span className={styles.history_label}>
-                    {faker.address.streetAddress(true)}
-                  </span>
-                </li>
+                <TrackingHistoryItem
+                  key={index}
+                  label={faker.date.weekday()}
+                  value={faker.address.streetAddress(true)}
+                ></TrackingHistoryItem>
               ))}
-            </ul>
+            </TrackingHistory>
           </section>
         </div>
         <img src={map} className={styles.map} />
