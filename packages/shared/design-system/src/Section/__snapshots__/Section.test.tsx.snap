@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section /> Snapshot is intact 1`] = `
+<section
+  className="sc-bdfBwQ fpQbfy"
+>
+  <div
+    className="sc-gsTCUz fcuqMu"
+  >
+    <div
+      className="sc-dlfnbm bcBhUh"
+    >
+      Test
+    </div>
+  </div>
+</section>
+`;
