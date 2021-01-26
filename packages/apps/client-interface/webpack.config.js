@@ -9,6 +9,7 @@ module.exports = (env, options) => ({
     compress: true,
     port: 7002,
     open: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
