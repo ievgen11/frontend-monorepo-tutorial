@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> Snapshot is intact 1`] = `
+<footer
+  className="sc-bdfBwQ jCiSbZ"
+>
+  <div
+    className="sc-gsTCUz iBofmE"
+  >
+    <p>
+      🎉 Monorepo created using:
+       
+      <a
+        href="https://lerna.js.org/"
+        target="_blank"
+      >
+        Lerna
+      </a>
+      ,
+       
+      <a
+        href="https://classic.yarnpkg.com/en/docs/workspaces/"
+        target="_blank"
+      >
+        Yarn Workspaces
+      </a>
+      ,
+       
+      <a
+        href="https://webpack.js.org/"
+        target="_blank"
+      >
+        Webpack
+      </a>
+      ,
+       
+      <a
+        href="https://storybook.js.org/"
+        target="_blank"
+      >
+        Storybook
+      </a>
+       
+      and
+       
+      <a
+        href="https://firebase.google.com/"
+        target="_blank"
+      >
+        Firebase
+      </a>
+      . Source code can be found
+       
+      <a
+        href="https://github.com/ievgen11/delipack"
+        target="_blank"
+      >
+        here
+      </a>
+      .
+    </p>
+  </div>
+</footer>
+`;
