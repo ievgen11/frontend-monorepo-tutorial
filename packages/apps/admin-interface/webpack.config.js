@@ -1,8 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = () => ({
+module.exports = (env, options) => ({
   entry: path.resolve(path.join(__dirname, "./src/index.tsx")),
   devServer: {
     compress: true,
@@ -18,6 +19,32 @@ module.exports = () => ({
         exclude: /node_modules/,
         use: ["ts-loader"],
       },
+      {
+        include: path.resolve(path.join(__dirname, "./src")),
+        test: /.*(\.scss|\.css)$/,
+        use: [
+          options.mode === "production"
+            ? MiniCssExtractPlugin.loader
+            : { loader: "style-loader" },
+          { loader: "css-loader", options: { modules: true } },
+          { loader: "sass-loader" },
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: "file-loader",
+        options: {
+          publicPath: "/",
+          name:
+            options.mode === "production"
+              ? "static/img/[contenthash].[ext]"
+              : "static/img/[path][name].[ext]",
+        },
+      },
+      {
+        test: /normalize.css$/,
+        use: [MiniCssExtractPlugin.loader, { loader: "css-loader" }],
+      },
     ],
   },
   plugins: [
@@ -27,6 +54,10 @@ module.exports = () => ({
       template: path.resolve(path.join(__dirname, "./src/index.html")),
       favicon: path.resolve(path.join(__dirname, "./favicon.ico")),
       title: "Delipack: Admin Interface",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "static/css/[name].[chunkhash:6].css",
+      chunkFilename: "static/css/[name].[chunkhash:6].css",
     }),
     new CleanWebpackPlugin(),
   ],
