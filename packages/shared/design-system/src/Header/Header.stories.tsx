@@ -2,7 +2,7 @@ import * as React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
-import { Header, ClientHeader } from "./index";
+import { Header, ClientHeader, AdminHeader } from "./index";
 
 export default {
   title: "Header",
@@ -18,4 +18,10 @@ export const ClientLogo = () => (
   <ClientHeader onLogoClick={action("onLogoClick")}>
     {text("Text", "Client Logo")}
   </ClientHeader>
+);
+
+export const AdminLogo = () => (
+  <AdminHeader onLogoClick={action("onLogoClick")}>
+    {text("Text", "Admin Logo")}
+  </AdminHeader>
 );

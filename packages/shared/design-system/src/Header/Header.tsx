@@ -52,7 +52,8 @@ const Logo = styled.img`
   }
 `;
 
-import clientLogo from "./client_logo.png";
+import clientLogo from "./images/client_logo.png";
+import adminLogo from "./images/admin_logo.png";
 
 export interface HeaderProps {
   children?: React.ReactNode;
@@ -79,4 +80,8 @@ export const Header: React.FC<HeaderProps> = ({
 
 export const ClientHeader: React.FC<HeaderProps> = (props): JSX.Element => (
   <Header logo={clientLogo} {...props} />
+);
+
+export const AdminHeader: React.FC<HeaderProps> = (props): JSX.Element => (
+  <Header logo={adminLogo} {...props} />
 );
