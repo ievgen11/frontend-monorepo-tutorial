@@ -1,14 +1,22 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { Button, Section, TextInput } from "@delipack/design-system";
 
-import styles from "./styles.scss";
+import Authentication from "../../services/Authentication";
 
+import styles from "./styles.scss";
 import lock from "./lock.png";
 
 export const AuthenticationPage = () => {
-  const handleClick = () => {
-    alert("log in");
+  const auth = Authentication.getInstance();
+  const [isPending, setIsPending] = useState(false);
+
+  const handleClick = async () => {
+    setIsPending(true);
+    setTimeout(() => {
+      setIsPending(false);
+      auth.setAccessToken("THIS_IS_THE_ACCESS_TOKEN");
+      window.location.href = "/overview";
+    }, 2000);
   };
 
   return (
@@ -21,7 +29,9 @@ export const AuthenticationPage = () => {
           <TextInput type="password" placeholder="Password" />
         </div>
         <div className={styles.inputContainer}>
-          <Button onClick={handleClick}>Authenticate</Button>
+          <Button disabled={isPending} onClick={handleClick}>
+            {isPending ? "Please wait..." : "Authenticate"}
+          </Button>
         </div>
       </div>
     </Section>
