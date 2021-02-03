@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": "true",
   "scripts": {
+    "build": "webpack --config ./webpack.config.js  --mode production",
     "lint": "yarn run lint:ts && yarn run lint:styles",
     "lint:styles": "stylelint 'src/**/*.{css,scss}'",
     "lint:ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",

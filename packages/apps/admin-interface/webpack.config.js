@@ -62,7 +62,7 @@ module.exports = (env, options) => ({
     new CleanWebpackPlugin(),
   ],
   output: {
-    path: path.resolve(path.join(__dirname, "./public")),
+    path: path.resolve(path.join(__dirname, "./build")),
     publicPath: "/",
     filename: "static/js/[name].js",
     sourceMapFilename: "static/maps/[filebase].map",
