@@ -2,6 +2,7 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = () => ({
+  target: "node",
   devtool: "source-map",
   entry: {
     index: path.resolve(path.join(__dirname, "./src/index.ts")),

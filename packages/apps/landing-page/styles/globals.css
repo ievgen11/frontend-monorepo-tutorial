@@ -1,0 +1,21 @@
+body {
+  min-height: 100vh;
+  background: #f0f0f0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: opacity 0.1s ease-in-out;
+}
+
+body.not-loaded {
+  visibility: hidden;
+  opacity: 0;
+}
+
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+li {
+  padding: 20px 0;
+}
