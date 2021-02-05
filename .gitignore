@@ -1,5 +1,7 @@
 .next/
+.firebase/
 node_modules/
-yarn-error.log
 build/
 lib/
+yarn-error.log
+firebase-debug.log

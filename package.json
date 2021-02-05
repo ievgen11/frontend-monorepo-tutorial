@@ -11,9 +11,11 @@
     "start": "lerna run compile --stream && lerna run --parallel start --stream",
     "lint": "lerna run --parallel lint --stream",
     "test": "lerna run --parallel test --stream",
-    "build": "lerna run compile --stream && lerna run build --stream"
+    "build": "lerna run compile --stream && lerna run build --stream",
+    "deploy": "yarn run build && firebase login && firebase deploy --only hosting"
   },
   "dependencies": {
+    "firebase-tools": "^9.3.0",
     "lerna": "^3.22.1"
   }
 }

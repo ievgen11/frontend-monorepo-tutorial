@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "default": "delipack-ea5af"
+  },
+  "targets": {
+    "delipack-ea5af": {
+      "hosting": {
+        "admin-interface": [
+          "admin-delipack"
+        ],
+        "client-interface": [
+          "client-delipack"
+        ],
+        "landing-page": [
+          "delipack"
+        ],
+        "design-system": [
+          "design-system-delipack"
+        ]
+      }
+    }
+  }
+}
